@@ -1,0 +1,1090 @@
+2021-05-25 12:21:04.562 -04:00 [INF] Application Is Starting
+2021-05-25 12:21:12.083 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 12:21:12.088 -04:00 [INF] Hosting environment: Development
+2021-05-25 12:21:12.090 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 12:21:12.146 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger - -
+2021-05-25 12:21:12.251 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 12:21:12.269 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger - - - 301 - - 127.6354ms
+2021-05-25 12:21:12.431 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 180.1821ms
+2021-05-25 12:21:12.491 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/swagger-ui.css - -
+2021-05-25 12:21:12.491 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/swagger-ui-bundle.js - -
+2021-05-25 12:21:12.491 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/swagger-ui-standalone-preset.js - -
+2021-05-25 12:21:12.583 -04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-05-25 12:21:12.583 -04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-05-25 12:21:12.583 -04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-05-25 12:21:12.588 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/swagger-ui.css - - - 200 142933 text/css 97.0847ms
+2021-05-25 12:21:12.592 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 100.0905ms
+2021-05-25 12:21:12.642 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 150.6991ms
+2021-05-25 12:21:12.991 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 12:21:13.042 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/favicon-32x32.png - -
+2021-05-25 12:21:13.045 -04:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-05-25 12:21:13.046 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/favicon-32x32.png - - - 200 628 image/png 3.6661ms
+2021-05-25 12:21:13.155 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 164.2330ms
+2021-05-25 12:21:19.482 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetAll - -
+2021-05-25 12:21:19.564 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:21:19.612 -04:00 [INF] Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:21:20.526 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:21:22.020 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:21:25.728 -04:00 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId], [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Employee] AS [e]
+INNER JOIN [Position] AS [p] ON [e].[PositionId] = [p].[PositionId]
+2021-05-25 12:21:25.809 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5272.2274ms.
+2021-05-25 12:21:25.820 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.EmployeeDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 12:21:26.091 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) in 6471.3376ms
+2021-05-25 12:21:26.092 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:21:26.101 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetAll - - - 200 188 application/json;+charset=utf-8 6618.3034ms
+2021-05-25 12:40:53.206 -04:00 [INF] Application Is Starting
+2021-05-25 12:40:58.486 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 12:40:58.516 -04:00 [INF] Hosting environment: Development
+2021-05-25 12:40:58.519 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 12:40:58.583 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 12:40:58.878 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 294.3573ms
+2021-05-25 12:40:59.350 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 12:40:59.549 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.3847ms
+2021-05-25 12:41:04.844 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetAll - -
+2021-05-25 12:41:04.936 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:41:05.060 -04:00 [INF] Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:41:06.078 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:41:07.549 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:41:11.340 -04:00 [INF] Executed DbCommand (96ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId], [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Employee] AS [e]
+INNER JOIN [Position] AS [p] ON [e].[PositionId] = [p].[PositionId]
+2021-05-25 12:41:11.445 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5353.2089ms.
+2021-05-25 12:41:11.462 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.EmployeeDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 12:41:11.801 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) in 6727.0771ms
+2021-05-25 12:41:11.803 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:41:11.819 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetAll - - - 200 186 application/json;+charset=utf-8 6975.4530ms
+2021-05-25 12:41:27.942 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetEmployeeById/1 - -
+2021-05-25 12:41:27.950 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI)'
+2021-05-25 12:41:27.998 -04:00 [INF] Route matched with {action = "GetEmployeeById", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeById(Int32) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:41:28.063 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:41:28.117 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:41:28.253 -04:00 [INF] Executed DbCommand (57ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId]
+FROM [Employee] AS [e]
+WHERE [e].[EmployeeId] = @__p_0
+2021-05-25 12:41:28.390 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 327.5091ms.
+2021-05-25 12:41:28.391 -04:00 [INF] Executing OkObjectResult, writing value of type 'BluePrintSys.WebAPI.Models.EmployeeDTO'.
+2021-05-25 12:41:28.393 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI) in 393.8926ms
+2021-05-25 12:41:28.393 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI)'
+2021-05-25 12:41:28.394 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetEmployeeById/1 - - - 200 169 application/json;+charset=utf-8 451.9272ms
+2021-05-25 12:41:37.945 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 12:41:37.946 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:41:37.953 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 12:41:37.995 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:41:38.012 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:41:38.043 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 12:41:38.045 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 50.0113ms.
+2021-05-25 12:41:38.046 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 12:41:38.051 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 98.4468ms
+2021-05-25 12:41:38.055 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 12:41:38.059 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 113.2086ms
+2021-05-25 12:42:46.259 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json-patch+json 86
+2021-05-25 12:42:46.284 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:42:46.285 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:42:46.293 -04:00 [INF] Route matched with {action = "InsertEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertEmployee(BluePrintSys.WebAPI.Models.EmployeeInsertDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:42:46.588 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:42:46.595 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:42:47.063 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employee] ([Address], [Comment], [DateCreated], [DateUpdated], [EmployeeGuid], [FullName], [PhoneNumber], [PositionId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [EmployeeId]
+FROM [Employee]
+WHERE @@ROWCOUNT = 1 AND [EmployeeId] = scope_identity();
+2021-05-25 12:42:47.152 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 563.2143ms.
+2021-05-25 12:42:47.153 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 12:42:47.166 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) in 873.5159ms
+2021-05-25 12:42:47.167 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:42:47.168 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json-patch+json 86 - 200 70 application/json;+charset=utf-8 909.1546ms
+2021-05-25 12:43:28.396 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/UpdateEmployee application/json-patch+json 84
+2021-05-25 12:43:28.398 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:43:28.398 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:43:28.423 -04:00 [INF] Route matched with {action = "UpdateEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEmployee(BluePrintSys.WebAPI.Models.EmployeeUpdateDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:43:28.489 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:43:28.492 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:43:28.701 -04:00 [ERR] Failed executing DbCommand (158ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Employee] SET [Address] = @p0, [Comment] = @p1, [DateCreated] = @p2, [DateUpdated] = @p3, [EmployeeGuid] = @p4, [FullName] = @p5, [PhoneNumber] = @p6, [PositionId] = @p7
+WHERE [EmployeeId] = @p8;
+SELECT @@ROWCOUNT;
+2021-05-25 12:43:28.746 -04:00 [ERR] An exception occurred in the database while saving changes for context type 'BluePrintSys.DataAccess.BlueprintsysContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-05-25 12:43:29.282 -04:00 [ERR] Something Went Wrong in the UpdateEmployee
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BluePrintSys.Core.Repository.UnitOfWork.Save() in C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.Core\Repository\UnitOfWork.cs:line 38
+   at BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee(EmployeeUpdateDTO employeeDTO) in C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI\Controllers\EmployeesController.cs:line 222
+2021-05-25 12:43:29.395 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 905.4611ms.
+2021-05-25 12:43:29.395 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-05-25 12:43:29.396 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI) in 972.5745ms
+2021-05-25 12:43:29.396 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:43:29.398 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/UpdateEmployee application/json-patch+json 84 - 500 - text/plain;+charset=utf-8 1005.2336ms
+2021-05-25 12:45:53.530 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/UpdateEmployee application/json-patch+json 84
+2021-05-25 12:45:53.530 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:45:53.531 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:45:53.531 -04:00 [INF] Route matched with {action = "UpdateEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEmployee(BluePrintSys.WebAPI.Models.EmployeeUpdateDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:45:53.578 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:46:26.133 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:46:31.283 -04:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Employee] SET [Address] = @p0, [Comment] = @p1, [DateCreated] = @p2, [DateUpdated] = @p3, [EmployeeGuid] = @p4, [FullName] = @p5, [PhoneNumber] = @p6, [PositionId] = @p7
+WHERE [EmployeeId] = @p8;
+SELECT @@ROWCOUNT;
+2021-05-25 12:46:31.341 -04:00 [ERR] An exception occurred in the database while saving changes for context type 'BluePrintSys.DataAccess.BlueprintsysContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-05-25 12:56:25.101 -04:00 [INF] Application Is Starting
+2021-05-25 12:56:30.900 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 12:56:30.905 -04:00 [INF] Hosting environment: Development
+2021-05-25 12:56:30.906 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 12:56:31.023 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 12:56:31.344 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 325.0697ms
+2021-05-25 12:56:31.677 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 12:56:31.881 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.9605ms
+2021-05-25 12:57:15.764 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/UpdateEmployee application/json-patch+json 107
+2021-05-25 12:57:15.794 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:57:15.910 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:57:16.013 -04:00 [INF] Route matched with {action = "UpdateEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEmployee(BluePrintSys.WebAPI.Models.EmployeeUpdateDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:57:17.297 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:57:22.061 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:57:25.626 -04:00 [INF] Executed DbCommand (93ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId]
+FROM [Employee] AS [e]
+WHERE [e].[EmployeeId] = @__p_0
+2021-05-25 12:57:26.068 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Employee] SET [Address] = @p0, [Comment] = @p1, [DateCreated] = @p2, [DateUpdated] = @p3, [EmployeeGuid] = @p4, [FullName] = @p5, [PhoneNumber] = @p6, [PositionId] = @p7
+WHERE [EmployeeId] = @p8;
+SELECT @@ROWCOUNT;
+2021-05-25 12:57:26.129 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8819.8942ms.
+2021-05-25 12:57:26.144 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 12:57:26.232 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI) in 10210.7874ms
+2021-05-25 12:57:26.233 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.UpdateEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:57:26.244 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/UpdateEmployee application/json-patch+json 107 - 200 16 application/json;+charset=utf-8 10480.2804ms
+2021-05-25 12:58:04.871 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/DeleteEmployee application/json-patch+json 93
+2021-05-25 12:58:04.912 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:58:04.918 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:58:04.965 -04:00 [INF] Route matched with {action = "DeleteEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteEmployee(BluePrintSys.WebAPI.Models.EmployeeUpdateDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:58:05.008 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:58:05.071 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:58:05.086 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId]
+FROM [Employee] AS [e]
+WHERE [e].[EmployeeId] = @__p_0
+2021-05-25 12:58:05.089 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 81.209ms.
+2021-05-25 12:58:05.090 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-05-25 12:58:05.091 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI) in 125.9778ms
+2021-05-25 12:58:05.091 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:58:05.093 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/DeleteEmployee application/json-patch+json 93 - 404 - text/plain;+charset=utf-8 223.9178ms
+2021-05-25 12:58:17.541 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetEmployeeById/1 - -
+2021-05-25 12:58:17.543 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI)'
+2021-05-25 12:58:17.554 -04:00 [INF] Route matched with {action = "GetEmployeeById", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeById(Int32) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:58:17.601 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:58:17.619 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:58:17.627 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId]
+FROM [Employee] AS [e]
+WHERE [e].[EmployeeId] = @__p_0
+2021-05-25 12:58:17.634 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.3631ms.
+2021-05-25 12:58:17.634 -04:00 [INF] Executing OkObjectResult, writing value of type 'BluePrintSys.WebAPI.Models.EmployeeDTO'.
+2021-05-25 12:58:17.649 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI) in 94.5411ms
+2021-05-25 12:58:17.649 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetEmployeeById (BluePrintSys.WebAPI)'
+2021-05-25 12:58:17.649 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetEmployeeById/1 - - - 200 169 application/json;+charset=utf-8 108.3345ms
+2021-05-25 12:58:58.807 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/DeleteEmployee application/json-patch+json 93
+2021-05-25 12:58:58.808 -04:00 [INF] CORS policy execution successful.
+2021-05-25 12:58:58.808 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:58:58.808 -04:00 [INF] Route matched with {action = "DeleteEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteEmployee(BluePrintSys.WebAPI.Models.EmployeeUpdateDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 12:58:58.876 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 12:58:58.878 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 12:58:58.906 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId]
+FROM [Employee] AS [e]
+WHERE [e].[EmployeeId] = @__p_0
+2021-05-25 12:58:58.924 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Employee]
+WHERE [EmployeeId] = @p0;
+SELECT @@ROWCOUNT;
+2021-05-25 12:58:58.932 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 55.9664ms.
+2021-05-25 12:58:58.934 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 12:58:58.937 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI) in 126.7354ms
+2021-05-25 12:58:58.937 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.DeleteEmployee (BluePrintSys.WebAPI)'
+2021-05-25 12:58:58.938 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/DeleteEmployee application/json-patch+json 93 - 200 45 application/json;+charset=utf-8 130.9212ms
+2021-05-25 17:12:26.236 -04:00 [INF] Application Is Starting
+2021-05-25 17:12:31.280 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 17:12:31.285 -04:00 [INF] Hosting environment: Development
+2021-05-25 17:12:31.287 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 17:12:31.343 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 17:12:31.678 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 338.9679ms
+2021-05-25 17:12:31.909 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 17:12:32.148 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.2534ms
+2021-05-25 17:34:59.319 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 17:34:59.347 -04:00 [INF] CORS policy execution successful.
+2021-05-25 17:34:59.498 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 17:34:59.621 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 17:35:00.398 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 17:35:02.016 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 17:35:05.331 -04:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 17:35:05.442 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5028.9653ms.
+2021-05-25 17:35:05.484 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 17:35:05.973 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 6329.1117ms
+2021-05-25 17:35:05.975 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 17:35:05.998 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 6679.1146ms
+2021-05-25 17:35:10.325 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 17:35:10.327 -04:00 [INF] CORS policy execution successful.
+2021-05-25 17:35:10.332 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 17:35:10.332 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 17:35:10.433 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 17:35:10.536 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 17:35:10.567 -04:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 17:35:10.568 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 134.6875ms.
+2021-05-25 17:35:10.569 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 17:35:10.570 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 237.0847ms
+2021-05-25 17:35:10.570 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 17:35:10.570 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 245.1794ms
+2021-05-25 18:29:32.558 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:29:32.560 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:29:32.561 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:29:32.562 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:29:32.626 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:29:32.670 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:29:33.778 -04:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:29:33.779 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1152.267ms.
+2021-05-25 18:29:33.779 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:29:33.794 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 1232.1025ms
+2021-05-25 18:29:33.794 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:29:33.795 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 1236.9252ms
+2021-05-25 18:29:36.969 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:29:36.969 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:29:36.969 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:29:36.969 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:29:37.007 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:29:37.008 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:29:37.025 -04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:29:37.031 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.1876ms.
+2021-05-25 18:29:37.031 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:29:37.032 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 61.8854ms
+2021-05-25 18:29:37.032 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:29:37.033 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 64.0286ms
+2021-05-25 18:32:39.097 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:32:39.148 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:32:39.148 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:32:39.149 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:32:39.192 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:32:39.193 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:32:39.222 -04:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:32:39.226 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.6348ms.
+2021-05-25 18:32:39.226 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:32:39.249 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 100.1691ms
+2021-05-25 18:32:39.249 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:32:39.250 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 152.3604ms
+2021-05-25 18:35:17.254 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:35:17.255 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:35:17.255 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:35:17.255 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:35:17.349 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:35:17.351 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:35:17.363 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:35:17.379 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.6492ms.
+2021-05-25 18:35:17.379 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:35:17.381 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 125.0477ms
+2021-05-25 18:35:17.381 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:35:17.382 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 127.8706ms
+2021-05-25 18:35:35.780 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:35:35.781 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:35:35.781 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:35:35.782 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:35:35.830 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:35:35.832 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:35:35.835 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:35:35.837 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.3713ms.
+2021-05-25 18:35:35.838 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:35:35.838 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 56.6671ms
+2021-05-25 18:35:35.838 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:35:35.839 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 58.5992ms
+2021-05-25 18:36:57.057 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:36:57.058 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:36:57.058 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:36:57.059 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:36:57.095 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:36:57.096 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:36:57.161 -04:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:36:57.162 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 66.5537ms.
+2021-05-25 18:36:57.162 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:36:57.162 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 103.4858ms
+2021-05-25 18:36:57.163 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:36:57.163 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 106.0153ms
+2021-05-25 18:38:57.201 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:38:57.201 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:38:57.203 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:38:57.203 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:38:57.262 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:38:57.265 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:38:57.273 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:38:57.274 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.3245ms.
+2021-05-25 18:38:57.275 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:38:57.275 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 72.1391ms
+2021-05-25 18:38:57.276 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:38:57.278 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 77.2833ms
+2021-05-25 18:39:25.946 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:39:25.947 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:39:25.947 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:39:25.947 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:39:26.007 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:39:26.026 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:39:26.033 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:39:26.034 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8.8926ms.
+2021-05-25 18:39:26.034 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:39:26.038 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 91.2618ms
+2021-05-25 18:39:26.039 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:39:26.056 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 109.3758ms
+2021-05-25 18:40:27.665 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:40:27.667 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:40:27.670 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:40:27.671 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:40:27.731 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:40:27.733 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:40:27.757 -04:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:40:27.757 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.5625ms.
+2021-05-25 18:40:27.758 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:40:27.759 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 88.0921ms
+2021-05-25 18:40:27.759 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:40:27.761 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 95.8209ms
+2021-05-25 18:43:23.139 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 18:43:23.161 -04:00 [INF] CORS policy execution successful.
+2021-05-25 18:43:23.162 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:43:23.162 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 18:43:23.197 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 18:43:23.198 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 18:43:23.205 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 18:43:23.207 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.5702ms.
+2021-05-25 18:43:23.222 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 18:43:23.235 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 73.3476ms
+2021-05-25 18:43:23.235 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 18:43:23.237 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 98.0877ms
+2021-05-25 19:21:06.744 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:21:06.745 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:21:06.745 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:21:06.745 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:21:06.785 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:21:06.786 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:21:08.679 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:21:08.680 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1895.0625ms.
+2021-05-25 19:21:08.680 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:21:08.682 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 1936.2499ms
+2021-05-25 19:21:08.682 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:21:08.683 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 1952.4704ms
+2021-05-25 19:25:02.087 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:25:02.087 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:25:02.088 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:25:02.088 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:25:02.132 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:25:02.149 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:25:02.157 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:25:02.158 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.7082ms.
+2021-05-25 19:25:02.159 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:25:02.160 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 72.4258ms
+2021-05-25 19:25:02.161 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:25:02.163 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 76.5498ms
+2021-05-25 19:37:19.342 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:37:19.356 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:37:19.357 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:19.357 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:37:19.405 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:37:19.407 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:37:21.549 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:37:21.549 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2144.218ms.
+2021-05-25 19:37:21.550 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:37:21.551 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 2194.5821ms
+2021-05-25 19:37:21.552 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:21.552 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 2211.7276ms
+2021-05-25 19:37:23.965 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:37:23.965 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:37:23.965 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:23.966 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:37:23.998 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:37:23.999 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:37:24.006 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:37:24.008 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.5805ms.
+2021-05-25 19:37:24.008 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:37:24.009 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 43.0779ms
+2021-05-25 19:37:24.009 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:24.009 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 44.4787ms
+2021-05-25 19:37:28.782 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:37:28.782 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:37:28.782 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:28.783 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:37:28.895 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:37:28.896 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:37:28.900 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:37:28.902 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.3641ms.
+2021-05-25 19:37:28.904 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:37:28.905 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 122.4165ms
+2021-05-25 19:37:28.905 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:37:28.906 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 124.0983ms
+2021-05-25 19:40:01.810 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:40:01.812 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:40:01.812 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:40:01.813 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:40:01.867 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:40:01.868 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:40:01.912 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:40:01.913 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 45.5537ms.
+2021-05-25 19:40:01.913 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:40:01.915 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 101.5837ms
+2021-05-25 19:40:01.915 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:40:01.917 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 107.1193ms
+2021-05-25 19:43:31.163 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 19:43:31.163 -04:00 [INF] CORS policy execution successful.
+2021-05-25 19:43:31.164 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:43:31.164 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 19:43:31.251 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 19:43:31.294 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 19:43:32.729 -04:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 19:43:32.730 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1479.0155ms.
+2021-05-25 19:43:32.731 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 19:43:32.731 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 1567.5981ms
+2021-05-25 19:43:32.732 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 19:43:32.732 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 1568.9773ms
+2021-05-25 20:28:30.378 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:28:30.379 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:28:30.380 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:28:30.397 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:28:30.443 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:28:30.444 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:28:31.914 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:28:31.914 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1471.0806ms.
+2021-05-25 20:28:31.914 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:28:31.915 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 1518.7375ms
+2021-05-25 20:28:31.915 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:28:31.916 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 1538.6607ms
+2021-05-25 20:47:58.592 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:47:58.593 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:47:58.594 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:47:58.595 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:47:58.746 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:47:58.768 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:47:59.865 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:47:59.866 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1119.4344ms.
+2021-05-25 20:47:59.866 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:47:59.866 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 1270.9216ms
+2021-05-25 20:47:59.867 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:47:59.867 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 1274.9495ms
+2021-05-25 20:51:44.061 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:51:44.061 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:51:44.061 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:51:44.062 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:51:44.354 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:51:44.355 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:51:44.364 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:51:44.367 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.3866ms.
+2021-05-25 20:51:44.367 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:51:44.368 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 306.37ms
+2021-05-25 20:51:44.370 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:51:44.394 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 341.7542ms
+2021-05-25 20:52:44.823 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:52:44.834 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:52:44.834 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:52:44.834 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:52:44.948 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:52:44.948 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:52:44.962 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:52:44.963 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.1918ms.
+2021-05-25 20:52:44.964 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:52:44.980 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 145.8868ms
+2021-05-25 20:52:44.980 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:52:44.981 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 157.7957ms
+2021-05-25 20:55:18.541 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:55:18.565 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:55:18.566 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:55:18.566 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:55:18.723 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:55:18.724 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:55:18.749 -04:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:55:18.750 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.0288ms.
+2021-05-25 20:55:18.751 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:55:18.751 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 185.5358ms
+2021-05-25 20:55:18.751 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:55:18.752 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 212.6189ms
+2021-05-25 20:57:44.921 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 20:57:44.922 -04:00 [INF] CORS policy execution successful.
+2021-05-25 20:57:44.922 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:57:44.925 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 20:57:45.028 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 20:57:45.030 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 20:57:45.049 -04:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 20:57:45.052 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.2639ms.
+2021-05-25 20:57:45.052 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 20:57:45.053 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 127.2575ms
+2021-05-25 20:57:45.053 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 20:57:45.053 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 132.1771ms
+2021-05-25 21:06:19.663 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:06:19.666 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:06:19.685 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:06:19.686 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:06:19.757 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:06:19.758 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:06:21.879 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:06:21.880 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2122.8492ms.
+2021-05-25 21:06:21.881 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:06:21.882 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 2195.5499ms
+2021-05-25 21:06:21.882 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:06:21.882 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 2219.1797ms
+2021-05-25 21:06:29.573 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:06:29.574 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:06:29.574 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:06:29.574 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:06:29.675 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:06:29.676 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:06:29.721 -04:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:06:29.721 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 46.0744ms.
+2021-05-25 21:06:29.721 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:06:29.722 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 147.7426ms
+2021-05-25 21:06:29.722 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:06:29.723 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 149.4929ms
+2021-05-25 21:09:26.514 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:09:26.514 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:09:26.515 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:09:26.515 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:09:26.586 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:09:26.588 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:09:26.609 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:09:26.610 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.0681ms.
+2021-05-25 21:09:26.610 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:09:26.611 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 95.5039ms
+2021-05-25 21:09:26.611 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:09:26.612 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 97.7180ms
+2021-05-25 21:10:59.716 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:10:59.719 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:10:59.720 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:10:59.720 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:10:59.897 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:10:59.897 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:10:59.902 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:10:59.902 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.7956ms.
+2021-05-25 21:10:59.903 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:10:59.904 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 184.3177ms
+2021-05-25 21:10:59.904 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:10:59.906 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 191.6953ms
+2021-05-25 21:12:58.972 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:12:58.974 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:12:58.974 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:12:58.990 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:12:59.032 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:12:59.033 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:12:59.056 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:12:59.056 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.7188ms.
+2021-05-25 21:12:59.057 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:12:59.058 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 66.7123ms
+2021-05-25 21:12:59.058 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:12:59.060 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 88.2120ms
+2021-05-25 21:26:20.426 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:26:20.444 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:26:20.445 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:26:20.445 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:26:20.504 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:26:20.505 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:26:22.456 -04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:26:22.456 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1952.0845ms.
+2021-05-25 21:26:22.457 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:26:22.457 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 2012.266ms
+2021-05-25 21:26:22.458 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:26:22.458 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 2032.9859ms
+2021-05-25 21:48:29.565 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:48:29.566 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:48:29.566 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:48:29.566 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:48:29.633 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:48:29.635 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:48:31.648 -04:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:48:31.648 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2015.3839ms.
+2021-05-25 21:48:31.649 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:48:31.653 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 2085.9026ms
+2021-05-25 21:48:31.653 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:48:31.654 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 2088.7010ms
+2021-05-25 21:48:36.285 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:48:36.285 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:48:36.285 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:48:36.285 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:48:36.357 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:48:36.362 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:48:36.376 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:48:36.376 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.0638ms.
+2021-05-25 21:48:36.376 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:48:36.377 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 91.2686ms
+2021-05-25 21:48:36.377 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:48:36.378 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 93.0553ms
+2021-05-25 21:50:07.303 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:50:07.305 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:50:07.320 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:50:07.321 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:50:07.367 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:50:07.368 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:50:07.378 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:50:07.419 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 51.6693ms.
+2021-05-25 21:50:07.419 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:50:07.420 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 99.5823ms
+2021-05-25 21:50:07.420 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:50:07.421 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 118.0179ms
+2021-05-25 21:54:59.192 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:54:59.193 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:54:59.193 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:54:59.194 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:54:59.255 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:54:59.274 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:54:59.282 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:54:59.284 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.5727ms.
+2021-05-25 21:54:59.299 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:54:59.300 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 106.6862ms
+2021-05-25 21:54:59.300 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:54:59.302 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 109.7920ms
+2021-05-25 21:55:27.309 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:55:27.310 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:55:27.310 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:55:27.310 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:55:27.409 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:55:27.427 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:55:27.431 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:55:27.436 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.4002ms.
+2021-05-25 21:55:27.437 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:55:27.461 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 151.095ms
+2021-05-25 21:55:27.461 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:55:27.462 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 152.2155ms
+2021-05-25 21:57:36.952 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 21:57:36.956 -04:00 [INF] CORS policy execution successful.
+2021-05-25 21:57:36.974 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:57:36.975 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 21:57:37.025 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 21:57:37.026 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 21:57:37.051 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 21:57:37.051 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.6001ms.
+2021-05-25 21:57:37.052 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 21:57:37.052 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 77.2553ms
+2021-05-25 21:57:37.052 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 21:57:37.053 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 101.1345ms
+2021-05-25 22:01:42.234 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 22:01:42.255 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:01:42.256 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:01:42.256 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 22:01:42.338 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:01:42.342 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:01:42.372 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 22:01:42.373 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 34.2568ms.
+2021-05-25 22:01:42.373 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 22:01:42.374 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 117.7089ms
+2021-05-25 22:01:42.374 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:01:42.375 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 140.8034ms
+2021-05-25 22:04:41.909 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 22:04:41.911 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:04:41.911 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:04:41.912 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 22:04:42.004 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:04:42.005 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:04:42.026 -04:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 22:04:42.030 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.821ms.
+2021-05-25 22:04:42.047 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 22:04:42.049 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 136.7955ms
+2021-05-25 22:04:42.049 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:04:42.049 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 140.6263ms
+2021-05-25 22:27:11.127 -04:00 [INF] Application Is Starting
+2021-05-25 22:27:16.678 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 22:27:16.684 -04:00 [INF] Hosting environment: Development
+2021-05-25 22:27:16.686 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 22:27:16.761 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 22:27:17.175 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 420.8226ms
+2021-05-25 22:27:17.567 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 22:27:17.777 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.6527ms
+2021-05-25 22:28:07.950 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 22:28:07.972 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:28:08.111 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:28:08.210 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 22:28:08.847 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:28:10.131 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:28:13.355 -04:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 22:28:13.421 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4564.6591ms.
+2021-05-25 22:28:13.435 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 22:28:13.707 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 5486.098ms
+2021-05-25 22:28:13.709 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:28:13.723 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 5773.3734ms
+2021-05-25 22:28:28.090 -04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44337/api/Employees/InsertEmployee - -
+2021-05-25 22:28:28.091 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:28:28.094 -04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44337/api/Employees/InsertEmployee - - - 204 - - 3.4766ms
+2021-05-25 22:28:28.097 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json 79
+2021-05-25 22:28:28.098 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:28:28.102 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 22:28:28.130 -04:00 [INF] Route matched with {action = "InsertEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertEmployee(BluePrintSys.WebAPI.Models.EmployeeInsertDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 22:28:28.305 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:28:28.354 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:28:32.181 -04:00 [INF] Executed DbCommand (61ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employee] ([Address], [Comment], [DateCreated], [DateUpdated], [EmployeeGuid], [FullName], [PhoneNumber], [PositionId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [EmployeeId]
+FROM [Employee]
+WHERE @@ROWCOUNT = 1 AND [EmployeeId] = scope_identity();
+2021-05-25 22:28:36.027 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7722.1162ms.
+2021-05-25 22:28:36.029 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 22:28:36.052 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) in 7921.516ms
+2021-05-25 22:28:36.053 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 22:28:36.054 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json 79 - 200 137 application/json;+charset=utf-8 7957.0438ms
+2021-05-25 22:33:57.157 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 22:33:57.193 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:33:57.194 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:33:57.195 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 22:33:57.318 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:33:57.333 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:33:57.345 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 22:33:57.346 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.2849ms.
+2021-05-25 22:33:57.347 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 22:33:57.348 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 152.9047ms
+2021-05-25 22:33:57.351 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 22:33:57.374 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 221.4647ms
+2021-05-25 22:34:06.810 -04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44337/api/Employees/InsertEmployee - -
+2021-05-25 22:34:06.811 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:34:06.811 -04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44337/api/Employees/InsertEmployee - - - 204 - - 0.7423ms
+2021-05-25 22:34:06.830 -04:00 [INF] Request starting HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json 76
+2021-05-25 22:34:06.830 -04:00 [INF] CORS policy execution successful.
+2021-05-25 22:34:06.839 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 22:34:06.839 -04:00 [INF] Route matched with {action = "InsertEmployee", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertEmployee(BluePrintSys.WebAPI.Models.EmployeeInsertDTO) on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 22:34:06.876 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 22:34:06.877 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 22:34:09.343 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 150), @p1='?' (Size = 500), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 150), @p5='?' (Size = 150), @p6='?' (Size = 50), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employee] ([Address], [Comment], [DateCreated], [DateUpdated], [EmployeeGuid], [FullName], [PhoneNumber], [PositionId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [EmployeeId]
+FROM [Employee]
+WHERE @@ROWCOUNT = 1 AND [EmployeeId] = scope_identity();
+2021-05-25 22:34:10.115 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3238.0041ms.
+2021-05-25 22:34:10.115 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 22:34:10.116 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI) in 3276.4382ms
+2021-05-25 22:34:10.116 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.InsertEmployee (BluePrintSys.WebAPI)'
+2021-05-25 22:34:10.117 -04:00 [INF] Request finished HTTP/2 POST https://localhost:44337/api/Employees/InsertEmployee application/json 76 - 200 137 application/json;+charset=utf-8 3287.1305ms
+2021-05-25 23:44:24.552 -04:00 [INF] Application Is Starting
+2021-05-25 23:44:32.025 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-25 23:44:32.030 -04:00 [INF] Hosting environment: Development
+2021-05-25 23:44:32.032 -04:00 [INF] Content root path: C:\Winton_Workspace\BluePrintSys\Backend\BluePrintSys\BluePrintSys\BluePrintSys.WebAPI
+2021-05-25 23:44:32.079 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/index.html - -
+2021-05-25 23:44:32.332 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/index.html - - - 200 - text/html;charset=utf-8 253.6407ms
+2021-05-25 23:44:32.605 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - -
+2021-05-25 23:44:32.776 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.4129ms
+2021-05-25 23:46:36.938 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 23:46:36.962 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:46:37.072 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:46:37.126 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 23:46:38.143 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:46:39.722 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:46:43.147 -04:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 23:46:43.216 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5063.016ms.
+2021-05-25 23:46:43.230 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 23:46:43.519 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 6383.2038ms
+2021-05-25 23:46:43.520 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:46:43.532 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 6594.6669ms
+2021-05-25 23:47:08.937 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 23:47:08.938 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:47:08.943 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:47:08.951 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 23:47:09.057 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:47:09.168 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:47:09.195 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 23:47:09.203 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 91.9694ms.
+2021-05-25 23:47:09.204 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 23:47:09.206 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 255.0129ms
+2021-05-25 23:47:09.206 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:47:09.207 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 270.2449ms
+2021-05-25 23:58:55.356 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetAll - -
+2021-05-25 23:58:55.359 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:58:55.395 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:58:55.431 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Positions/GetAll - -
+2021-05-25 23:58:55.431 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:58:55.431 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:58:55.432 -04:00 [INF] Route matched with {action = "GetAll", controller = "Positions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.PositionsController (BluePrintSys.WebAPI).
+2021-05-25 23:58:55.448 -04:00 [INF] Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 23:58:55.509 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:58:55.539 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:58:55.572 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:58:55.572 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:58:57.464 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Position] AS [p]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+2021-05-25 23:58:57.465 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1955.9836ms.
+2021-05-25 23:58:57.465 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.PositionDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-25 23:58:57.466 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI) in 2034.5016ms
+2021-05-25 23:58:57.466 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.PositionsController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:58:57.467 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Positions/GetAll - - - 200 289 application/json;+charset=utf-8 2035.8688ms
+2021-05-25 23:58:58.473 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId], [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Employee] AS [e]
+INNER JOIN [Position] AS [p] ON [e].[PositionId] = [p].[PositionId]
+2021-05-25 23:58:58.487 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2947.8357ms.
+2021-05-25 23:58:58.487 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.EmployeeDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 23:58:58.508 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) in 3059.8992ms
+2021-05-25 23:58:58.508 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:58:58.508 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetAll - - - 200 573 application/json;+charset=utf-8 3152.9625ms
+2021-05-25 23:59:08.222 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetAll - -
+2021-05-25 23:59:08.222 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:59:08.225 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:59:08.225 -04:00 [INF] Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 23:59:08.279 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:59:08.279 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:59:08.283 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId], [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Employee] AS [e]
+INNER JOIN [Position] AS [p] ON [e].[PositionId] = [p].[PositionId]
+2021-05-25 23:59:08.286 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.8226ms.
+2021-05-25 23:59:08.287 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.EmployeeDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 23:59:08.288 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) in 62.3374ms
+2021-05-25 23:59:08.288 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:59:08.288 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetAll - - - 200 573 application/json;+charset=utf-8 66.3521ms
+2021-05-25 23:59:10.165 -04:00 [INF] Request starting HTTP/2 GET https://localhost:44337/api/Employees/GetAll - -
+2021-05-25 23:59:10.166 -04:00 [INF] CORS policy execution successful.
+2021-05-25 23:59:10.166 -04:00 [INF] Executing endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:59:10.166 -04:00 [INF] Route matched with {action = "GetAll", controller = "Employees"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BluePrintSys.WebAPI.Controllers.EmployeesController (BluePrintSys.WebAPI).
+2021-05-25 23:59:10.206 -04:00 [INF] Executing action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) - Validation state: "Valid"
+2021-05-25 23:59:10.207 -04:00 [INF] Entity Framework Core 5.0.6 initialized 'BlueprintsysContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-05-25 23:59:10.211 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], [e].[Address], [e].[Comment], [e].[DateCreated], [e].[DateUpdated], [e].[EmployeeGuid], [e].[FullName], [e].[PhoneNumber], [e].[PositionId], [p].[PositionId], [p].[IsActive], [p].[PositionName]
+FROM [Employee] AS [e]
+INNER JOIN [Position] AS [p] ON [e].[PositionId] = [p].[PositionId]
+2021-05-25 23:59:10.229 -04:00 [INF] Executed action method BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.8299ms.
+2021-05-25 23:59:10.230 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[BluePrintSys.WebAPI.Models.EmployeeDTO, BluePrintSys.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-05-25 23:59:10.232 -04:00 [INF] Executed action BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI) in 66.3128ms
+2021-05-25 23:59:10.233 -04:00 [INF] Executed endpoint 'BluePrintSys.WebAPI.Controllers.EmployeesController.GetAll (BluePrintSys.WebAPI)'
+2021-05-25 23:59:10.234 -04:00 [INF] Request finished HTTP/2 GET https://localhost:44337/api/Employees/GetAll - - - 200 573 application/json;+charset=utf-8 68.2583ms

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePrintSys.WebAPI", "BluePrintSys.WebAPI\BluePrintSys.WebAPI.csproj", "{366098CE-5BF4-4DD0-B19B-B4A0FD712E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePrintSys.DataAccess", "BluePrintSys.DataAccess\BluePrintSys.DataAccess.csproj", "{C59CA57D-D4E0-4A24-BF18-237F51B67DEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluePrintSys.Core", "BluePrintSys.Core\BluePrintSys.Core.csproj", "{2D293A15-420E-431C-9990-E5A72D71398E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{AEEFB1E6-1877-4B79-B89A-7F32A7C70AB4}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Users\Winton\Documents\BluePrintSys.sql = ..\..\..\..\..\Users\Winton\Documents\BluePrintSys.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{366098CE-5BF4-4DD0-B19B-B4A0FD712E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366098CE-5BF4-4DD0-B19B-B4A0FD712E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366098CE-5BF4-4DD0-B19B-B4A0FD712E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366098CE-5BF4-4DD0-B19B-B4A0FD712E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59CA57D-D4E0-4A24-BF18-237F51B67DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59CA57D-D4E0-4A24-BF18-237F51B67DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59CA57D-D4E0-4A24-BF18-237F51B67DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59CA57D-D4E0-4A24-BF18-237F51B67DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D293A15-420E-431C-9990-E5A72D71398E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D293A15-420E-431C-9990-E5A72D71398E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D293A15-420E-431C-9990-E5A72D71398E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D293A15-420E-431C-9990-E5A72D71398E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1109333-81F3-47D2-B2F3-4EE0582638DF}
+	EndGlobalSection
+EndGlobal
